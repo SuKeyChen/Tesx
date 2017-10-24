@@ -40,7 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\Definitions.cs" />
+    <Compile Include="Helpers\GameConstants.cs" />
+    <Compile Include="Helpers\ServerConstants.cs" />
+    <Compile Include="Networking\ClientSocket.cs" />
+    <Compile Include="Networking\InPacket.cs" />
+    <Compile Include="Networking\OutPacket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WvsApp\WvsApp.cs" />
+    <Compile Include="WvsContext\WvsContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DevLogs\UpdateLog.md" />
@@ -48,10 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Field\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Networking\" />
     <Folder Include="Utilities\" />
-    <Folder Include="WvsContext\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
