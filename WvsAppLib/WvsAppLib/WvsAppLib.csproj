@@ -40,22 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ItemInfo.cs" />
+    <Compile Include="Common\Packet.cs" />
+    <Compile Include="Wvs\Field.cs" />
+    <Compile Include="Wvs\World.cs" />
     <Compile Include="Helpers\Definitions.cs" />
     <Compile Include="Helpers\GameConstants.cs" />
     <Compile Include="Helpers\ServerConstants.cs" />
-    <Compile Include="Networking\ClientSocket.cs" />
-    <Compile Include="Networking\InPacket.cs" />
-    <Compile Include="Networking\OutPacket.cs" />
+    <Compile Include="Common\ClientSocket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WvsApp\WvsApp.cs" />
-    <Compile Include="WvsContext\WvsContext.cs" />
+    <Compile Include="Wvs\WvsApp.cs" />
+    <Compile Include="Wvs\Context.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DevLogs\UpdateLog.md" />
     <None Include="DevLogs\VersionLog.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Field\" />
     <Folder Include="Utilities\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

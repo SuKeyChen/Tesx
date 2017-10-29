@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 using WvsAppLib.Helpers;
 using WvsAppLib.Networking;
 
-namespace WvsAppLib.WvsContext
+namespace WvsAppLib.Wvs
 {
-    public sealed class WvsContext
+    public sealed class Context
     {
         #region Singleton Pattern Implementation
-        private static volatile WvsContext instance;
+        private static volatile Context instance;
         private static object syncRoot = new Object();
 
-        private WvsContext() { }
+        private Context() { }
         
-        public static WvsContext Instance
+        public static Context Instance
         {
             get
             {
@@ -25,7 +25,7 @@ namespace WvsAppLib.WvsContext
                     lock (syncRoot)
                     {
                         if (instance == null)
-                            instance = new WvsContext();
+                            instance = new Context();
                     }
                 }
 
