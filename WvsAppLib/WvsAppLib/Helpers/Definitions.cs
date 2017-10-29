@@ -6,6 +6,17 @@ using System.Threading.Tasks;
 
 namespace WvsAppLib.Helpers
 {
+    public enum Region
+    {
+        Korea = 1,
+        Japan,
+        Global = 8,
+        SEA,
+        Taiwan,
+        China,
+        Thailand
+    }
+
     public enum Jobs
     {
         BEGINNER = 0,
@@ -206,14 +217,31 @@ namespace WvsAppLib.Helpers
     public enum Worlds
     {
         SCANIA = 0,
-        BERA,
+        BERA = 1,
+        BROA = 2,
         WINDIA,
-        NOVA,
-        LEGENDS,
+        KHAINI = 4,
+        BELLOCAN = 5,
+        MARDIA = 6,
+        KRADIA = 7,
+        YELLONDE = 8,
+        DEMETHOS = 9,
+        GALICIA = 10,
+        EL_NIDO = 11,
+        ZENITH = 12,
+        ARCANIA = 13,
+        CHAOS = 14,
+        NOVA = 15,
+        RENEGADES = 16,
+        ENOSIS = 29,
         LUNA = 30,
-        ARCANE = 50,
+        ELYSIUM = 31,
+        RED = 43,
+        AURORA = 44,
         REBOOT = 45,
-        REBOOT2
+        REBOOT2 = 46,
+        ARCANE = 50,
+        TESPIA = 100
     }
 
     public static class Definitions
