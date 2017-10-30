@@ -12,6 +12,8 @@ namespace WvsAppLib.Common
         private byte state;
         private byte[] buffer;
         private uint length, dataLength, offset;
+
+        public void Dump() { }
     }
 
     /* 3241 */

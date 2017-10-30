@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CharacterData.cs" />
     <Compile Include="Common\ItemInfo.cs" />
     <Compile Include="Common\Packet.cs" />
     <Compile Include="Wvs\Field.cs" />
@@ -49,7 +50,7 @@
     <Compile Include="Helpers\ServerConstants.cs" />
     <Compile Include="Common\ClientSocket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wvs\WvsApp.cs" />
+    <Compile Include="Wvs\App.cs" />
     <Compile Include="Wvs\Context.cs" />
   </ItemGroup>
   <ItemGroup>

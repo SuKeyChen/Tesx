@@ -37,7 +37,7 @@ namespace WvsAppLib.Wvs
         #region OnPacket Handler
         void OnPacket(InPacket inPacket)
         {
-            if (inPacket.Header == (int)InPacketHeader.HANDSHAKE_REQUEST)
+            if (inPacket.Header == (int)InPacketHeader.HandshakeRequest)
             {
             }
         }

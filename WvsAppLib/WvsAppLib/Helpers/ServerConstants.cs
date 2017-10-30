@@ -8,6 +8,8 @@ namespace WvsAppLib.Helpers
 {
     static class ServerConstants
     {
-        
+        public static readonly int Locale = (int)Region.Global;
+        public static readonly int MajorVersion = 189;
+        public static readonly int MinorVersion = 1;
     }
 }

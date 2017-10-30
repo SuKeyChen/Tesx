@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WvsAppLib.Common;
 using WvsAppLib.Helpers;
 using WvsAppLib.Networking;
 
-namespace WvsAppLib.WvsApp
+namespace WvsAppLib.Wvs
 {
-    class WvsApp
+    class App
     {
         public static void Main(string[] args)
         {
