@@ -13,6 +13,13 @@ namespace WvsAppLib.Common
         private byte[] buffer;
         private uint length, dataLength, offset;
 
+        public bool IsLoopback { get; private set; }
+        public byte State { get; private set; }
+        public byte[] Buffer { get; private set; }
+        public uint Length { get; private set; }
+        public uint DataLength { get; private set; }
+        public uint Offset { get; private set; }
+
         public void Dump() { }
     }
 
@@ -29,6 +36,30 @@ namespace WvsAppLib.Common
     //};
     public sealed class InPacket : Packet
     {
+        public char Decode1()
+        {
+            return 'c';
+        }
+        public short Decode2()
+        {
+            return 10;
+        }
+        public int Decode4()
+        {
+            return 0;
+        }
+        public long Decode8()
+        {
+            return 0;
+        }
+        public byte[] DecodeBuffer(int size)
+        {
+            return null;
+        }
+        public string DecodeString()
+        {
+            return string.Empty;
+        }
     }
 
     /* 4366 */
@@ -44,5 +75,24 @@ namespace WvsAppLib.Common
     {
         private bool typeHeader1Byte;
         private bool isEncryptedByShanda;
+
+        public void Encode1(char c)
+        {
+        }
+        public void Encode2(short sInteger)
+        {
+        }
+        public void Encode4(int integer)
+        {
+        }
+        public void Encode8(long sInteger)
+        {
+        }
+        public void EncodeBuffer(byte[] buffer, int size)
+        {
+        }
+        public void EncodeString(string text)
+        {
+        }
     }
 }
