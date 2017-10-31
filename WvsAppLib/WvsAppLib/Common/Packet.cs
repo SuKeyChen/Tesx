@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WvsAppLib.Common
 {
-    abstract class Packet
+    public abstract class Packet
     {
         private bool loopback;
         private byte state;
@@ -27,7 +27,7 @@ namespace WvsAppLib.Common
     //    unsigned int m_uDataLen;
     //    unsigned int m_uOffset;
     //};
-    class InPacket : Packet
+    public sealed class InPacket : Packet
     {
     }
 
@@ -40,7 +40,7 @@ namespace WvsAppLib.Common
     //    int m_bTypeHeader1Byte;
     //    int m_bIsEncryptedByShanda;
     //};
-    class OutPacket : Packet
+    public sealed class OutPacket : Packet
     {
         private bool typeHeader1Byte;
         private bool isEncryptedByShanda;

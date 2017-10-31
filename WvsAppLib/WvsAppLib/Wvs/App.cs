@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WvsAppLib.Common;
 using WvsAppLib.Helpers;
-using WvsAppLib.Networking;
+using WvsAppLib.Common;
 
 namespace WvsAppLib.Wvs
 {

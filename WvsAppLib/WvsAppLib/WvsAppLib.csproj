@@ -56,9 +56,24 @@
   <ItemGroup>
     <None Include="DevLogs\UpdateLog.md" />
     <None Include="DevLogs\VersionLog.md" />
+    <None Include="Dumps\6a4373d183f8c30cd74e25e0b6d67a51cccf.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utilities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dumps\Database.c" />
+    <Content Include="Dumps\MapleStoryT.h" />
+    <Content Include="Dumps\NameSpace.c" />
+    <Content Include="Dumps\ResMan.c" />
+    <Content Include="Dumps\WvsCenter.c" />
+    <Content Include="Dumps\WvsClaim.c" />
+    <Content Include="Dumps\WvsGame.c" />
+    <Content Include="Dumps\WvsGame.h" />
+    <Content Include="Dumps\WvsLogin.c" />
+    <Content Include="Dumps\WvsLoginT.c" />
+    <Content Include="Dumps\WvsMapGen.c" />
+    <Content Include="Dumps\WvsShop.c" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

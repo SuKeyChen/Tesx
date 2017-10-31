@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WvsAppLib.Helpers;
-using WvsAppLib.Networking;
+using WvsAppLib.Common;
 
 namespace WvsAppLib.Wvs
 {
@@ -37,9 +37,6 @@ namespace WvsAppLib.Wvs
         #region OnPacket Handler
         void OnPacket(InPacket inPacket)
         {
-            if (inPacket.Header == (int)InPacketHeader.HandshakeRequest)
-            {
-            }
         }
 
         #region Handler Methods
