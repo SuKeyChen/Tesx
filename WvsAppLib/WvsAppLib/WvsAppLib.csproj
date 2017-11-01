@@ -40,9 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\CharacterData.cs" />
+    <Compile Include="Common\Character\AvatarLook.cs" />
+    <Compile Include="Common\Character\CharacterData.cs" />
+    <Compile Include="Common\Character\CharacterStat.cs" />
     <Compile Include="Common\ItemInfo.cs" />
     <Compile Include="Common\Packet.cs" />
+    <Compile Include="Common\User.cs" />
     <Compile Include="Wvs\Field.cs" />
     <Compile Include="Wvs\World.cs" />
     <Compile Include="Helpers\Definitions.cs" />
@@ -59,6 +62,8 @@
     <None Include="Dumps\6a4373d183f8c30cd74e25e0b6d67a51cccf.xlsx" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Common\Inventory\" />
+    <Folder Include="Security\" />
     <Folder Include="Utilities\" />
   </ItemGroup>
   <ItemGroup>

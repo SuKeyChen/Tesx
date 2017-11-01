@@ -76,6 +76,14 @@ namespace WvsAppLib.Common
         private bool typeHeader1Byte;
         private bool isEncryptedByShanda;
 
+        #region Constructors
+        public OutPacket()
+        {
+        }
+
+        #endregion
+
+        #region Methods
         public void Encode1(char c)
         {
         }
@@ -94,5 +102,6 @@ namespace WvsAppLib.Common
         public void EncodeString(string text)
         {
         }
+        #endregion
     }
 }
