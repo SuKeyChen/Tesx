@@ -48,7 +48,7 @@ namespace WvsAppLib.Common
 
         protected internal void SendPacket(OutPacket outPacket) { }
 
-        protected internal void OnRecieved(InPacket inPacket)
+        protected internal void ProcessPacket(InPacket inPacket)
         {
         }
     }
