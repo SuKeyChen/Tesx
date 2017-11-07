@@ -25,7 +25,6 @@ namespace WvsAppLib.Common
             byte[] newBuffer = new byte[Length + size];
             System.Buffer.BlockCopy(Buffer, 0, newBuffer, 0, Length);
             Buffer = newBuffer;
-            //Length = Buffer.Length;
         }
         public void Dump() { }
         public void DisplayArray(string name)

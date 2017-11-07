@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WvsAppLib.Common
+namespace WvsAppLib.Common.Inventory
 {
-    public class User
+    public static class ItemInfo
     {
+        public static bool IsFaceItem() { return true; }
     }
 }
