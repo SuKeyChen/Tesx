@@ -13,19 +13,19 @@ namespace WvsAppLib.Common
         private byte[] buffer;
         private uint length, dataLength, offset;
 
-        public bool IsLoopback { get; protected set; }
-        public byte State { get; protected set; }
-        public byte[] Buffer { get; protected set; }
-        public int Length { get; protected set; }
-        public int DataLength { get; protected set; }
-        public int Offset { get; protected set; }
+        public bool IsLoopback { get; set; }
+        public byte State { get; set; }
+        public byte[] Buffer { get; set; }
+        public int Length { get; set; }
+        public int DataLength { get; set; }
+        public int Offset { get; set; }
 
         protected void EnlargeBuffer(int size)
         {
             byte[] newBuffer = new byte[Length + size];
-            System.Buffer.BlockCopy(Buffer, Offset, newBuffer, 0, size);
+            System.Buffer.BlockCopy(Buffer, 0, newBuffer, 0, Length);
             Buffer = newBuffer;
-            Length = Buffer.Length;
+            //Length = Buffer.Length;
         }
         public void Dump() { }
         public void DisplayArray(string name)
@@ -58,11 +58,13 @@ namespace WvsAppLib.Common
         public InPacket (short header, byte[] buffer)
         {
             Buffer = buffer;
+            Length = Buffer.Length;
+            Offset = 0;
         }
 
         public char Decode1()
         {
-            char c = BitConverter.ToChar(Buffer, Offset);
+            char c = Convert.ToChar(Buffer[Offset]);
             Offset += 1;
 
             return c;
@@ -100,7 +102,6 @@ namespace WvsAppLib.Common
         {
             int length = Decode2();
             string text = Encoding.UTF8.GetString(DecodeBuffer(length));
-            Offset += length;
 
             return text;
         }
@@ -125,7 +126,7 @@ namespace WvsAppLib.Common
         {
             Buffer = new byte[4];
             Offset = 0;
-            Length = Buffer.Length;
+            Length = 0;
         }
 
         #endregion
@@ -136,30 +137,35 @@ namespace WvsAppLib.Common
             EnlargeBuffer(1);
             System.Buffer.BlockCopy(new byte[] { (byte) c }, 0, Buffer, Offset, 1);
             Offset += 1;
+            Length += 1;
         }
         public void Encode2(short s)
         {
             EnlargeBuffer(2);
             System.Buffer.BlockCopy(new byte[] { (byte) s, (byte) (s >> 8) }, 0, Buffer, Offset, 2);
             Offset += 2;
+            Length += 2;
         }
         public void Encode4(int i)
         {
             EnlargeBuffer(4);
             System.Buffer.BlockCopy(new byte[] { (byte) i, (byte) (i >> 8), (byte) (i >> 16), (byte) (i >> 24)}, 0, Buffer, Offset, 4);
             Offset += 4;
+            Length += 4;
         }
         public void Encode8(long l)
         {
             EnlargeBuffer(8);
             System.Buffer.BlockCopy(new byte[] { (byte) l, (byte) (l >> 8), (byte) (l >> 16), (byte) (l >> 24), (byte) (l >> 32), (byte) (l >> 40), (byte) (l >> 48), (byte) (l >> 56) }, 0, Buffer, Offset, 8);
             Offset += 8;
+            Length += 8;
         }
         public void EncodeBuffer(byte[] buffer, int size)
         {
             EnlargeBuffer(size);
             System.Buffer.BlockCopy(buffer, 0, Buffer, Offset, size);
             Offset += size;
+            Length += size;
         }
         public void EncodeString(string text)
         {

@@ -2974,5 +2974,8 @@ namespace WvsAppLib.Common.Character
 
     enum Gender
     {
+        Male,
+        Female,
+        Unisex
     };
 }
