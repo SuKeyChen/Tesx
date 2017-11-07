@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WvsAppLib.Helpers
+namespace WvsAppLib.Common
 {
-    static class GameConstants
+    class ServerSocket
     {
-        public static readonly ulong[] ExpTable = { 0, 10 };
+
+        public ServerSocket()
+        { }
     }
 }

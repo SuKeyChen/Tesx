@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WvsAppLib.Helpers
+namespace WvsAppLib.Common
 {
     static class ServerConstants
     {

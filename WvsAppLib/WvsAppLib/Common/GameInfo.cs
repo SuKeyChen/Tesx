@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WvsAppLib.Common
 {
-    class ItemInfo
+    static class GameInfo
     {
+        public static readonly ulong[] ExpTable = { 0, 10 };
     }
 }

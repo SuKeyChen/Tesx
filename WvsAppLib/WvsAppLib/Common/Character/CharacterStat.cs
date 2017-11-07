@@ -2971,11 +2971,4 @@ namespace WvsAppLib.Common.Character
     public partial struct SecondaryStat
     {
     }
-
-    enum Gender
-    {
-        Male,
-        Female,
-        Unisex
-    };
 }

@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WvsAppLib.Common;
-using WvsAppLib.Helpers;
-using WvsAppLib.Common;
 
 namespace WvsAppLib.Wvs
 {
