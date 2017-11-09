@@ -68,9 +68,7 @@
     <None Include="Dumps\6a4373d183f8c30cd74e25e0b6d67a51cccf.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Common\Skill\" />
-    <Folder Include="Field\" />
-    <Folder Include="Helpers\" />
+    <Folder Include="Common\Inventory\" />
     <Folder Include="Security\" />
   </ItemGroup>
   <ItemGroup>
