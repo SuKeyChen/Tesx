@@ -51,6 +51,7 @@
     <Compile Include="Common\ServerSocket.cs" />
     <Compile Include="Common\User.cs" />
     <Compile Include="Interfaces\ILoginHandler.cs" />
+    <Compile Include="Security\IGCipher.cs" />
     <Compile Include="Utilities\ProgressBar.cs" />
     <Compile Include="Wvs\Field.cs" />
     <Compile Include="Wvs\World.cs" />
@@ -67,10 +68,7 @@
     <None Include="DevLogs\VersionLog.md" />
     <None Include="Dumps\6a4373d183f8c30cd74e25e0b6d67a51cccf.xlsx" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\Inventory\" />
-    <Folder Include="Security\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Dumps\Database.c" />
     <Content Include="Dumps\Maplestory95.c" />

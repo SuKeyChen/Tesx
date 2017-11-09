@@ -421,7 +421,7 @@ namespace WvsAppLib.Common
         Tespia = 100
     }
 
-    enum Gender
+    public enum Gender
     {
         Male = 0x0,
         Female = 0x1,
