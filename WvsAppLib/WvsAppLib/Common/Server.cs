@@ -9,8 +9,9 @@ namespace WvsAppLib.Common
 {
     public abstract class Server
     {
-        public readonly short Port = 8484;
-
+        public short Port { get; private set; }
         public Socket Socket { get; private set; }
+
+        public Server() { }
     }
 }

@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 namespace WvsAppLib.Common
 {
 
-    enum InPacketHeader
+    public enum InPacketHeader
     {
         HandshakeRequest = 0x00,
         SelectWorldResult = 0x01,
         LoginRequest = 0x20
     }
 
-    enum OutPacketHeader
+    public enum OutPacketHeader
     {
     }
 
-    enum Region
+    public enum Region
     {
         Korea = 1,
         Japan,
@@ -205,7 +205,7 @@ namespace WvsAppLib.Common
     //  JOB_NORPG_SHININGSTAR = 0x7530,
     //};
     #endregion
-    enum Jobs
+    public enum Jobs
     {
         Beginner = 0,
 
@@ -390,43 +390,6 @@ namespace WvsAppLib.Common
         Zero3 = 10111,
         Zero4 = 10112
     }
-
-    enum Worlds
-    {
-        Scania = 0,
-        Bera = 1,
-        Broa = 2,
-        Windia,
-        Khaini = 4,
-        Bellocan = 5,
-        Mardia = 6,
-        Kradia = 7,
-        Yellonde = 8,
-        Demethos = 9,
-        Galicia = 10,
-        ElNido = 11,
-        Zenith = 12,
-        Arcania = 13,
-        Chaos = 14,
-        Nova = 15,
-        Renegades = 16,
-        Enosis = 29,
-        Luna = 30,
-        Elysium = 31,
-        Red = 43,
-        Aurora = 44,
-        Reboot = 45,
-        Reboot2 = 46,
-        Arcane = 50,
-        Tespia = 100
-    }
-
-    public enum Gender
-    {
-        Male = 0x0,
-        Female = 0x1,
-        Unisex = 0x2
-    };
 
     public static class Definitions
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using WvsAppLib.Common;
+using WvsAppLib.Common.Inventory;
 
 namespace WvsAppLib.Common.Character
 {
