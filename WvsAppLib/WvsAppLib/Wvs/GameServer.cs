@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,18 +45,23 @@ namespace WvsAppLib.Wvs
         public string RecommendationMessage { get; private set; }
         public int ExpRate { get; private set; }
         public int DropRate { get; private set; }
+        public Dictionary<JobRace, bool> EnabledJobRaces { get; set; }
 
-        public GameServer(World world, short port, string msg, int exp, int drop)
+        public GameServer(World world, short port, string msg, int exp, int drop, Dictionary<JobRace, bool> enabledJobRaces) : base(port)
         {
             Id = (int)world;
             Name = world.ToString();
-            Port = port;
             RecommendationMessage = msg;
             ExpRate = exp;
             DropRate = drop;
+            EnabledJobRaces = enabledJobRaces;
         }
 
         public void Start() { }
         public void Stop() { }
+        public override string ToString()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
     }
 }

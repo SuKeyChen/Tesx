@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace WvsAppLib.Common.Inventory
 {
-    public class Item
+    public class Equipment : Item
     {
-        public int Id { get; set; }
-        private ItemCategory category;
     }
 }

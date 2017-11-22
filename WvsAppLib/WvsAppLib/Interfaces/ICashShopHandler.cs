@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WvsAppLib.Common.Inventory
+namespace WvsAppLib.Interfaces
 {
-    public class Item
+    interface ICashShopHandler
     {
-        public int Id { get; set; }
-        private ItemCategory category;
     }
 }

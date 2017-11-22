@@ -28,4 +28,6 @@ namespace WvsAppLib.Common.Inventory
         public static Gender GetGender(int id) { return (Gender)(id % 1000); }
         public static bool IsCashItem(int id) { return true; }
     }
+
+    public class ItemStats { }
 }

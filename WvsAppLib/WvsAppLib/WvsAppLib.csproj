@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +48,8 @@
     <Compile Include="Common\Character\CharacterData.cs" />
     <Compile Include="Common\Character\CharacterStat.cs" />
     <Compile Include="Common\Client.cs" />
+    <Compile Include="Common\Inventory\Equipment.cs" />
+    <Compile Include="Common\Inventory\Inventory.cs" />
     <Compile Include="Common\Inventory\Item.cs" />
     <Compile Include="Common\Inventory\ItemInfo.cs" />
     <Compile Include="Common\Login\LoginServer.cs" />
@@ -51,9 +57,13 @@
     <Compile Include="Common\Server.cs" />
     <Compile Include="Common\ServerSocket.cs" />
     <Compile Include="Common\User.cs" />
+    <Compile Include="Interfaces\ICashShopHandler.cs" />
     <Compile Include="Interfaces\IContextHandler.cs" />
     <Compile Include="Interfaces\IFieldHandler.cs" />
     <Compile Include="Interfaces\ILoginHandler.cs" />
+    <Compile Include="Interfaces\IMobHandler.cs" />
+    <Compile Include="Interfaces\INpcHandler.cs" />
+    <Compile Include="Interfaces\IStageHandler.cs" />
     <Compile Include="Security\IGCipher.cs" />
     <Compile Include="Utilities\ProgressBar.cs" />
     <Compile Include="Wvs\Field.cs" />
@@ -70,6 +80,7 @@
     <None Include="DevLogs\UpdateLog.md" />
     <None Include="DevLogs\VersionLog.md" />
     <None Include="Dumps\6a4373d183f8c30cd74e25e0b6d67a51cccf.xlsx" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

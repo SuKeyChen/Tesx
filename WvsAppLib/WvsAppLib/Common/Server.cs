@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace WvsAppLib.Common
 {
-    public abstract class Server
+    public class Server
     {
         public short Port { get; private set; }
         public Socket Socket { get; private set; }
 
         public Server() { }
+        public Server(short port) { Port = port; }
+        public Server(Socket socket, short Port) { }
     }
 }

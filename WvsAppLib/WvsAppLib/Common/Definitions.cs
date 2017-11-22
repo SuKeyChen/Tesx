@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,33 @@ using System.Threading.Tasks;
 
 namespace WvsAppLib.Common
 {
+    public enum JobRace
+    {
+        Resistance = 0,
+        Explorer,
+        KnightOfCygnus,
+        Mercedes,
+        Shade,
+        Luminous,
+        Phantom,
+        Aran,
+        Evan,
+        DualBlade,
+        Cannoneer,
+        Demon,
+        Xenon,
+        Kaiser,
+        AngelicBuster,
+        Cadena,
+        Illium,
+        Zero,
+        BeastTamer,
+        Jett,
+        Kanna,
+        Hayato,
+        Kinesis,
+        PinkBean
+    }
 
     public enum InPacketHeader
     {
@@ -393,18 +421,5 @@ namespace WvsAppLib.Common
 
     public static class Definitions
     {
-
-        static void Dump()
-        {
-            Type headers = typeof(InPacketHeader);
-
-            foreach (var e in Enum.GetNames(headers))
-            {
-                foreach (var f in Enum.GetValues(headers))
-                {
-                    System.Console.WriteLine("{0} - {1}", e, f);
-                }
-            }
-        }
     }
 }
