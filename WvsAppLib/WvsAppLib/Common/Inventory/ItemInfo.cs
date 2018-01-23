@@ -29,5 +29,17 @@ namespace WvsAppLib.Common.Inventory
         public static bool IsCashItem(int id) { return true; }
     }
 
-    public class ItemStats { }
+    public class ItemStat
+    {
+        public int Str { get; set; }
+        public int Dex { get; set; }
+        public int Int { get; set; }
+        public int Luk { get; set; }
+        public int Hp { get; set; }
+        public int MaxHp { get; set; }
+        public int Mp { get; set; }
+        public int MaxMp { get; set; }
+        public int LevelReduction { get; set; }
+        public int AdditionalOptionAllStat { get; set; }
+    }
 }

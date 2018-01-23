@@ -14,7 +14,7 @@ namespace WvsAppLib.Common.Inventory
         public override string ToString()
         {
             if (Items == null)
-                return "Null reference instance ";
+                return "Null reference instance.";
 
             return JsonConvert.SerializeObject(this);
         }
